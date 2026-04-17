@@ -1,8 +1,49 @@
-### Diretrizes de nomenclatura de código
+# Urban Routes UI Test Automation
 
-- **Nomes de variáveis** são escritos em `snake_case` e descrevem sua finalidade;
-- **Constantes** são escritas em maiúsculas;
-- **Comentários** são usados para explicar blocos importantes de código;
-- A **organização do código** é modular, com blocos de código reutilizáveis importados para onde for necessário;
-- Evite funções de espera (`wait`) desnecessárias que fazem com que o teste seja executado por mais tempo do que o necessário;
-- Siga uma **convenção de nomenclatura** para títulos de teste que começam com `test\_` e fornece uma descrição clara do cenário de teste. Os títulos dos testes são fornecidos no resumo.
+This project contains automated UI tests for the Urban Routes web application, focusing on validating real user flows and interface behavior using browser automation.
+
+---
+
+## Technologies Used
+
+- Python  
+- Selenium  
+- Pytest  
+
+---
+
+## How to Run the Project
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/joaoluizcsampaio-commits/urban-routes-ui-automation.git
+cd urban-routes-ui-automation
+```
+2. Install dependecies:
+```
+pip install -r requirements.txt
+```
+3. Run the tests:
+pytest
+## What Was Tested
+- Route creation flow
+- Tariff selection
+- UI elements validation
+- Form interactions
+- Navigation between screens
+
+## Project Purpose
+
+This project was developed as part of a QA training program.
+
+It demonstrates skills in:
+
+- UI test automation
+- Test structure using Page Object Model (POM)
+- Writing automated test scenarios
+- Using Selenium with Python
+
+## Author
+
+João Sampaio
