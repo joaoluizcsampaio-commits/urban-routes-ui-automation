@@ -5,21 +5,19 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from pages import UrbanRoutesPage
 
-
 class TestUrbanRoutes:
-
     driver = None
 
     @classmethod
     def setup_class(cls):
-        # Configura o Chrome com logging para capturar o código do SMS
+        # Sets up Chrome with performance logging to capture the SMS code
         options = Options()
         options.set_capability("goog:loggingPrefs", {"performance": "ALL"})
         cls.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
         cls.driver.implicitly_wait(5)
 
     def test_set_route(self):
-        # Define origem e destino e inicia a busca por veículo
+        # Sets origin and destination addresses and initiates the ride request
         self.driver.get(data.URBAN_ROUTES_URL)
         routes_page = UrbanRoutesPage(self.driver)
         address_from = data.ADDRESS_FROM
