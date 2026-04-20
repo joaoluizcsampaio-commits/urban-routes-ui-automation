@@ -6,7 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from helpers import retrieve_phone_code
 
 class UrbanRoutesPage:
-    #Todos os localizadores usados
+    # All locators used
     from_field = (By.ID, 'from')
     to_field = (By.ID, 'to')
     call_taxi_button = (By.XPATH, '//button[contains(text(), "Chamar um táxi")]')
@@ -40,7 +40,7 @@ class UrbanRoutesPage:
     order_driver_image = (By.XPATH, '//div[@class="order-button"]//img')
     order_driver_name = (By.XPATH, '//div[@class="order-btn-group"][1]/div[2]')
 
-    #Funções
+    # Methods
     def __init__(self, driver):
         self.driver = driver
 
@@ -94,7 +94,7 @@ class UrbanRoutesPage:
         return self._wait_for(self.phone_number).text
 
     def set_card(self, card_number, code):
-        # Seleciona métdo de pagamento e adiciona cartão
+        # Selects payment method and adds card
         self.driver.find_element(*self.payment_method_select).click()
         self.driver.implicitly_wait(2)
         self.driver.find_element(*self.add_card_control).click()
