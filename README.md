@@ -20,7 +20,7 @@ This project contains automated UI tests for the Urban Routes web application, f
 git clone https://github.com/joaoluizcsampaio-commits/urban-routes-ui-automation.git
 cd urban-routes-ui-automation
 ```
-2. Install dependecies:
+2. Install dependencies:
 ```
 pip install -r requirements.txt
 ```
